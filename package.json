@@ -65,7 +65,7 @@
     "pretty-quick": "3.1.0",
     "react": "16.8.4",
     "react-native": "0.57.7",
-    "regenerator-runtime": "0.13.1",
+    "regenerator-runtime": "0.13.9",
     "rxjs-marbles": "5.0.0",
     "semantic-release": "17.3.9",
     "travis-deploy-once": "5.0.11"

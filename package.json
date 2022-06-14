@@ -1,6 +1,6 @@
 {
-  "name": "react-native-sensors",
-  "version": "7.2.1-rc.2",
+  "name": "@trusohamn/react-native-sensors",
+  "version": "7.2.2",
   "description": "A developer friendly approach for sensors in react-native",
   "scripts": {
     "contributor:add": "all-contributors add",

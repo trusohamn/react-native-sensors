@@ -30,6 +30,7 @@ public class RNSensor extends ReactContextBaseJavaModule implements SensorEventL
   private float[] rotation = new float[9];
   private float[] orientation = new float[3];
   private float[] quaternion = new float[4];
+  private int accuracy = -1;
 
   public RNSensor(ReactApplicationContext reactContext, String sensorName, int sensorType) {
     super(reactContext);
@@ -141,11 +142,13 @@ public class RNSensor extends ReactContextBaseJavaModule implements SensorEventL
 
       // timestamp is added to all events
       map.putDouble("timestamp", this.sensorTimestampToEpochMilliseconds(sensorEvent.timestamp));
+      map.putDouble("accuracy", this.accuracy);
       this.sendEvent(this.sensorName, map);
     }
   }
 
   @Override
   public void onAccuracyChanged(Sensor sensor, int accuracy) {
+    this.accuracy = accuracy;
   }
 }
